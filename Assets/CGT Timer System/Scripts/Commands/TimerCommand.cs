@@ -30,5 +30,12 @@ namespace Fungus.TimeSys
         }
 
         protected Timer timer;
+
+        public override Color GetButtonColor()
+        {
+            return buttonColor;
+        }
+
+        protected static Color32 buttonColor = new Color32(200, 222, 255, 255);
     }
 }
