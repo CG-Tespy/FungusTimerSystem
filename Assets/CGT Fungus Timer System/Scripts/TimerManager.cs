@@ -8,7 +8,8 @@ namespace Fungus.TimeSys
     {
         protected virtual void Awake()
         {
-            if (Instance != null)
+            bool timerManagerAlreadyInScene = Instance != null;
+            if (timerManagerAlreadyInScene)
             {
                 Destroy(this.gameObject);
                 return;
@@ -124,7 +125,9 @@ namespace Fungus.TimeSys
 
         public static void EnsureExists()
         {
-            if (Instance == null)
+            bool noTimerManagerInScene = Instance == null;
+
+            if (noTimerManagerInScene)
             {
                 GameObject managerHolderBase = new GameObject("TimerManager");
                 GameObject managerHolder = Instantiate<GameObject>(managerHolderBase);
