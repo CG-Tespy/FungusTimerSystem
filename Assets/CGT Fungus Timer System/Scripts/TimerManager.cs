@@ -129,8 +129,7 @@ namespace Fungus.TimeSys
 
             if (noTimerManagerInScene)
             {
-                GameObject managerHolderBase = new GameObject("TimerManager");
-                GameObject managerHolder = Instantiate<GameObject>(managerHolderBase);
+                GameObject managerHolder = new GameObject("TimerManager");
 
                 Instance = managerHolder.AddComponent<TimerManager>();
                 DontDestroyOnLoad(Instance.gameObject);
