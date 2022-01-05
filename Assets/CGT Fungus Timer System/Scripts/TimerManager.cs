@@ -19,18 +19,6 @@ namespace Fungus.TimeSys
 
         public static TimerManager Instance { get; private set; }
 
-        public static void EnsureExists()
-        {
-            if (Instance == null)
-            {
-                GameObject managerHolderBase = new GameObject("TimerManager");
-                GameObject managerHolder = Instantiate<GameObject>(managerHolderBase);
-
-                Instance = managerHolder.AddComponent<TimerManager>();
-                DontDestroyOnLoad(Instance.gameObject);
-            }
-        }
-
         protected virtual void SetUpPlaytimeTimer()
         {
             CreateTimerWithID(playtimeTimerID);
@@ -45,12 +33,34 @@ namespace Fungus.TimeSys
 
         protected int playtimeTimerID = 0;
 
+        /// <summary>
+        /// The compiler might not tell you, but attempts to alter the state of the Timers 
+        /// through this getter will fail.
+        /// </summary>
         public IDictionary<int, Timer> Timers
         {
-            get { return timers; }
+            get { return CreateCopyOfTimers(); }
         }
 
         protected IDictionary<int, Timer> timers = new Dictionary<int, Timer>();
+
+        protected virtual IDictionary<int, Timer> CreateCopyOfTimers()
+        {
+            // Since we want to make sure that clients cannot mess with the state of the timers
+            // without going through this manager first
+            IDictionary<int, Timer> holderOfCopies = new Dictionary<int, Timer>();
+            IDictionary<int, Timer> theOriginal = timers;
+
+            foreach (int id in theOriginal.Keys)
+            {
+                Timer originalTimer = theOriginal[id];
+                Timer copyOfTimer = Timer.Clone(originalTimer);
+
+                holderOfCopies[id] = copyOfTimer;
+            }
+
+            return holderOfCopies;
+        }
 
         public virtual void StartTimerWithID(int id)
         {
@@ -109,6 +119,18 @@ namespace Fungus.TimeSys
             foreach (Timer timerEl in timers.Values)
             {
                 timerEl.Update();
+            }
+        }
+
+        public static void EnsureExists()
+        {
+            if (Instance == null)
+            {
+                GameObject managerHolderBase = new GameObject("TimerManager");
+                GameObject managerHolder = Instantiate<GameObject>(managerHolderBase);
+
+                Instance = managerHolder.AddComponent<TimerManager>();
+                DontDestroyOnLoad(Instance.gameObject);
             }
         }
 
