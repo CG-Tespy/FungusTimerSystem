@@ -45,11 +45,12 @@ namespace Fungus.TimeSys
 
         protected int playtimeTimerID = 0;
 
-        public Dictionary<int, Timer> Timers
+        public IDictionary<int, Timer> Timers
         {
             get { return timers; }
         }
-        protected Dictionary<int, Timer> timers = new Dictionary<int, Timer>();
+
+        protected IDictionary<int, Timer> timers = new Dictionary<int, Timer>();
 
         public virtual void StartTimerWithID(int id)
         {
