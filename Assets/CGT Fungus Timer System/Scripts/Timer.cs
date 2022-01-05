@@ -199,6 +199,21 @@ namespace Fungus.TimeSys
             OnAnyTimerStop(this);
         }
 
+        public static Timer Clone(Timer toClone)
+        {
+            Timer theClone = new Timer();
+            theClone.countdownStartingTime = toClone.countdownStartingTime;
+            theClone.countdownStartingTimeString = toClone.countdownStartingTimeString;
+            theClone.id = toClone.id;
+            theClone.lastUpdate = toClone.lastUpdate;
+            theClone.timeRecorded = toClone.timeRecorded;
+            theClone.timeRecordedString = toClone.timeRecordedString;
+            theClone.timerMode = toClone.timerMode;
+            theClone.timerState = toClone.timerState;
+
+            return theClone;
+        }
+
     }
 
     public enum TimerMode
