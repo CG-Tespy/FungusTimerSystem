@@ -1164,7 +1164,7 @@ Prefab:
         type: 2}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 1352774607}
+      objectReference: {fileID: 1352774612}
     - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
         type: 2}
       propertyPath: variables.Array.data[8]
@@ -1184,7 +1184,7 @@ Prefab:
         type: 2}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 1352774572}
+      objectReference: {fileID: 1352774596}
     - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
         type: 2}
       propertyPath: variables.Array.data[11]
@@ -1255,6 +1255,11 @@ Prefab:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1352774558}
+    - target: {fileID: 114692662433066396, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: timerMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 345895a0762d4a747b6aba374b0da272, type: 2}
   m_IsPrefabParent: 0
@@ -1498,9 +1503,15 @@ MonoBehaviour:
   stat: 0
   minDigitCount: 3
   output: {fileID: 1352774562}
---- !u!114 &1352774607 stripped
+--- !u!114 &1352774596 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114475277764807554, guid: 345895a0762d4a747b6aba374b0da272,
+  m_PrefabParentObject: {fileID: 114594231228199114, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: 6e165a32baec18040864c27c29b1a423, type: 3}
+--- !u!114 &1352774612 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114445499254091736, guid: 345895a0762d4a747b6aba374b0da272,
     type: 2}
   m_PrefabInternal: {fileID: 1352774556}
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}

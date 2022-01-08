@@ -24,5 +24,14 @@ namespace Fungus.TimeSys
 
         protected TimeSpan countdownTime;
 
+        public override string GetSummary()
+        {
+            string timerName = timer.Key;
+            string summary = string.Format(summaryFormat, timerName, milliseconds, seconds, minutes, hours, days);
+            return summary;
+        }
+
+        protected static string summaryFormat = "{0}, {1} millsec, {2} sec, {3} min, {4} hour, {5} day";
+
     }
 }

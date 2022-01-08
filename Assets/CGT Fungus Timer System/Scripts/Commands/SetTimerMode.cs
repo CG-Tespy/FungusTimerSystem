@@ -14,5 +14,14 @@ namespace Fungus.TimeSys
             TimerManager.SetModeOfTimerWithID(timer.Value, timerMode);
             Continue();
         }
+
+        public override string GetSummary()
+        {
+            string timerName = timer.Key;
+            string summary = string.Format(summaryFormat, timerName, timerMode);
+            return summary;
+        }
+
+        protected static string summaryFormat = "Set {0} to {1}";
     }
 }

@@ -57,5 +57,11 @@ namespace Fungus.TimeSys
         }
 
         protected static Color32 buttonColor = new Color32(200, 222, 255, 255);
+
+        public override string GetSummary()
+        {
+            string timerName = timer.Key;
+            return timerName;
+        }
     }
 }

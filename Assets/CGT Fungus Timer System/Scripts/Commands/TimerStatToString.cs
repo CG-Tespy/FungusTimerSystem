@@ -67,8 +67,9 @@ namespace Fungus.TimeSys
 
         public override string GetSummary()
         {
+			string timerName = timer.Key;
 			string outputVarName = GetOutputVarName();
-			string result = string.Format(summaryFormat, stat, minDigitCount, outputVarName);
+			string result = string.Format(summaryFormat, timerName, stat, minDigitCount, outputVarName);
 
 			return result;
         }
@@ -88,6 +89,6 @@ namespace Fungus.TimeSys
 			return result;
 		}
 
-		protected static string summaryFormat = "{0}, {1} digits, {2}";
+		protected static string summaryFormat = "{0}, {1}, {2} digits, {3}";
     }
 }
