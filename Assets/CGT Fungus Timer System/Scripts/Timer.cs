@@ -102,8 +102,19 @@ namespace Fungus.TimeSys
 
             if (shouldStopCountingDown)
             {
-                stoppingSelfDueToCountdown = true;
-                TimeRecorded = new TimeSpan();
+                EndCountdown();
+            }
+        }
+
+        public virtual void EndCountdown()
+        {
+            bool thisIsForCountdowns = this.timerMode == TimerMode.countdown;
+            // ^No point having this func do anything when this timer isn't for countdowns, after all
+        
+            if (thisIsForCountdowns)
+            {
+                stoppingSelfDueToCountdown = true; // <- To make sure that the event just for normal timer-stops doesn't proc
+                TimeRecorded = new TimeSpan(); // <- Might as well make the current time a perfect zero instead of a negative
                 this.Stop();
                 OnAnyTimerCountdownEnd(this);
                 stoppingSelfDueToCountdown = false;
