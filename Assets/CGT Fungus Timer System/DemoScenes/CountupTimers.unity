@@ -1128,7 +1128,7 @@ Prefab:
         type: 2}
       propertyPath: selectedBlocks.Array.data[0]
       value: 
-      objectReference: {fileID: 1352774576}
+      objectReference: {fileID: 1352774602}
     - target: {fileID: 114701204361507130, guid: 345895a0762d4a747b6aba374b0da272,
         type: 2}
       propertyPath: targetButton
@@ -1153,7 +1153,7 @@ Prefab:
         type: 2}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 1352774575}
+      objectReference: {fileID: 1352774592}
     - target: {fileID: 114295747037990552, guid: 345895a0762d4a747b6aba374b0da272,
         type: 2}
       propertyPath: _targetGameObject.gameObjectVal
@@ -1269,6 +1269,46 @@ Prefab:
       propertyPath: nodeRect.y
       value: 98.680824
       objectReference: {fileID: 0}
+    - target: {fileID: 114982971574334800, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: key
+      value: testTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114594231228199114, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1352774561}
+    - target: {fileID: 114692662433066396, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1352774561}
+    - target: {fileID: 114757080869746886, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1352774561}
+    - target: {fileID: 114892689044992144, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1352774561}
+    - target: {fileID: 114198159610034856, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: nodeRect.x
+      value: 23.872341
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198159610034856, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: nodeRect.y
+      value: 237.12766
+      objectReference: {fileID: 0}
+    - target: {fileID: 114500760449782882, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1352774561}
     m_RemovedComponents:
     - {fileID: 114295747037990552, guid: 345895a0762d4a747b6aba374b0da272, type: 2}
     - {fileID: 114287233511300772, guid: 345895a0762d4a747b6aba374b0da272, type: 2}
@@ -1297,7 +1337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
 --- !u!114 &1352774560
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1432,7 +1472,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1352774567
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1446,7 +1486,7 @@ MonoBehaviour:
   value: 
 --- !u!114 &1352774568
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1460,7 +1500,7 @@ MonoBehaviour:
   value: 
 --- !u!114 &1352774569
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1474,7 +1514,7 @@ MonoBehaviour:
   value: 
 --- !u!114 &1352774570
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1488,7 +1528,7 @@ MonoBehaviour:
   value: 
 --- !u!114 &1352774571
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1499,15 +1539,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   indentLevel: 0
-  timerID:
-    integerRef: {fileID: 1352774561}
-    integerVal: 0
+  timer: {fileID: 1352774561}
   stat: 1
   minDigitCount: 2
   output: {fileID: 1352774569}
 --- !u!114 &1352774572
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1518,15 +1556,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 47
   indentLevel: 0
-  timerID:
-    integerRef: {fileID: 1352774561}
-    integerVal: 0
+  timer: {fileID: 1352774561}
   stat: 2
   minDigitCount: 2
   output: {fileID: 1352774568}
 --- !u!114 &1352774573
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1537,15 +1573,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 46
   indentLevel: 0
-  timerID:
-    integerRef: {fileID: 1352774561}
-    integerVal: 0
+  timer: {fileID: 1352774561}
   stat: 3
   minDigitCount: 2
   output: {fileID: 1352774567}
 --- !u!114 &1352774574
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1556,18 +1590,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 45
   indentLevel: 0
-  timerID:
-    integerRef: {fileID: 1352774561}
-    integerVal: 0
+  timer: {fileID: 1352774561}
   stat: 0
   minDigitCount: 3
   output: {fileID: 1352774570}
---- !u!114 &1352774575 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114946882405276954, guid: 345895a0762d4a747b6aba374b0da272,
-    type: 2}
-  m_PrefabInternal: {fileID: 1352774556}
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
 --- !u!114 &1352774576 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114427602339953678, guid: 345895a0762d4a747b6aba374b0da272,
@@ -1576,7 +1602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
 --- !u!114 &1352774577
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352774557}
@@ -1594,6 +1620,18 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 1
+--- !u!114 &1352774592 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114892689044992144, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: a249c54c57a6c094194a553ef01ebb11, type: 3}
+--- !u!114 &1352774602 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114198159610034856, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
 --- !u!114 &1477164083 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,

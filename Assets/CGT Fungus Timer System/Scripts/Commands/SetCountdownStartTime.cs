@@ -13,7 +13,7 @@ namespace Fungus.TimeSys
         {
             base.OnEnter();
             PrepTheTime();
-            TimerManager.SetCountdownStartingTimeOfTimerWithID(timerID, ref countdownTime);
+            TimerManager.SetCountdownStartingTimeOfTimerWithID(timer.Value, ref countdownTime);
             Continue();
         }
 

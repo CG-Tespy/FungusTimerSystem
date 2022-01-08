@@ -11,7 +11,7 @@ namespace Fungus.TimeSys
         public override void OnEnter()
         {
             base.OnEnter();
-            TimerManager.SetModeOfTimerWithID(timerID, timerMode);
+            TimerManager.SetModeOfTimerWithID(timer.Value, timerMode);
             Continue();
         }
     }

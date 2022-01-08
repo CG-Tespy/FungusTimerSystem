@@ -7,7 +7,7 @@
         {
             base.OnEnter();
 
-            TimerManager.EndCountdownOfTimerWithID(timer.ID);
+            TimerManager.EndCountdownOfTimerWithID(timerObj.ID);
             Continue();
         }
     }

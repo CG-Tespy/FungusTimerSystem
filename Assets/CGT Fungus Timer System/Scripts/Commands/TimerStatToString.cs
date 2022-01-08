@@ -27,6 +27,7 @@ namespace Fungus.TimeSys
             {
 				LetUserKnowThisCantDoItsThing();
 				Continue();
+				return;
             }
 
             base.OnEnter();
