@@ -115,6 +115,28 @@ namespace Fungus.TimeSys
             timers[id].CountdownStartingTime = countdownTime;
         }
 
+        public virtual void EndCountdownOfTimerWithID(int id)
+        {
+            EnsureTimerExistsWithID(id);
+            Timer timerToWorkWith = timers[id];
+
+            bool notForCountdowns = timerToWorkWith.TimerMode != TimerMode.countdown;
+            if (notForCountdowns)
+            {
+                string messageFormat = "Cannot force countdown-ending of Timer with ID {0} since it's not a Countdown timer.";
+                string message = string.Format(messageFormat, timerToWorkWith.ID);
+                Debug.LogWarning(message);
+                return;
+            }
+
+            bool itIsCountingDown = timerToWorkWith.TimerState == TimerState.running;
+
+            if (itIsCountingDown)
+            {
+                timerToWorkWith.EndCountdown();
+            }
+        }
+
         protected virtual void Update()
         {
             foreach (Timer timerEl in timers.Values)
