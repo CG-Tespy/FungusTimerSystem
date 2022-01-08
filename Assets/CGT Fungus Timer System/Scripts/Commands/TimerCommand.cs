@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TimeSpan = System.TimeSpan;
 
 namespace Fungus.TimeSys
 {
@@ -16,6 +17,7 @@ namespace Fungus.TimeSys
         {
             base.OnEnter();
             FetchTimerToActOn();
+            timeRecorded = timer.TimeRecorded;
         }
 
         protected virtual void FetchTimerToActOn()
@@ -30,7 +32,8 @@ namespace Fungus.TimeSys
         }
 
         protected Timer timer;
-
+        protected TimeSpan timeRecorded;
+        
         public override Color GetButtonColor()
         {
             return buttonColor;
