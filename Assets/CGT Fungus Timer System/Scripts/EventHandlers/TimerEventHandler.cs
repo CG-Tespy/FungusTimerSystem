@@ -69,8 +69,5 @@ namespace Fungus.TimeSys
         {
             TimerEvent -= OnTimerEventExecuted;
         }
-
-        
-
     }
 }

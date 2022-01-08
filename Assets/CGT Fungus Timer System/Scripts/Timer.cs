@@ -102,10 +102,15 @@ namespace Fungus.TimeSys
 
             if (shouldStopCountingDown)
             {
+                stoppingSelfDueToCountdown = true;
                 TimeRecorded = new TimeSpan();
                 this.Stop();
+                OnAnyTimerCountdownEnd(this);
+                stoppingSelfDueToCountdown = false;
             }
         }
+
+        protected bool stoppingSelfDueToCountdown = false;
 
         public virtual void Start()
         {
@@ -147,6 +152,7 @@ namespace Fungus.TimeSys
         public static System.Action<Timer> OnAnyTimerStart = delegate { };
         public static System.Action<Timer> OnAnyTimerReset = delegate { };
         public static System.Action<Timer> OnAnyTimerStop = delegate { };
+        public static System.Action<Timer> OnAnyTimerCountdownEnd = delegate { };
 
         public virtual void Reset()
         {
@@ -196,7 +202,9 @@ namespace Fungus.TimeSys
                 return;
 
             timerState = TimerState.stopped;
-            OnAnyTimerStop(this);
+
+            if (!stoppingSelfDueToCountdown)
+                OnAnyTimerStop(this);
         }
 
         public static Timer Clone(Timer toClone)
