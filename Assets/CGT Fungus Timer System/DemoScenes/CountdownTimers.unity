@@ -1058,6 +1058,26 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: variables.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062126419805268, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: commandList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4694771322169256, guid: 345895a0762d4a747b6aba374b0da272, type: 2}
       propertyPath: m_LocalPosition.x
       value: 402
@@ -1140,9 +1160,332 @@ Prefab:
       propertyPath: _targetGameObject.gameObjectVal
       value: 
       objectReference: {fileID: 1023981934}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: selectedBlocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1352774563}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: variables.Array.data[8]
+      value: 
+      objectReference: {fileID: 1352774562}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: variables.Array.data[9]
+      value: 
+      objectReference: {fileID: 1352774561}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: variables.Array.data[10]
+      value: 
+      objectReference: {fileID: 1352774560}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1352774596}
+    - target: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: variables.Array.data[11]
+      value: 
+      objectReference: {fileID: 1352774570}
+    - target: {fileID: 114062126419805268, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1352774567}
+    - target: {fileID: 114062126419805268, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1352774572}
+    - target: {fileID: 114427602339953678, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: nodeRect.x
+      value: 445.08517
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427602339953678, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: nodeRect.y
+      value: 102.93614
+      objectReference: {fileID: 0}
+    - target: {fileID: 114982971574334800, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: key
+      value: testTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530332948223328, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: text.stringVal
+      value: '{$hoursString}:{$minutesString}:{$secondsString}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114062126419805268, guid: 345895a0762d4a747b6aba374b0da272,
+        type: 2}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1352774567}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 345895a0762d4a747b6aba374b0da272, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1352774557 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+--- !u!114 &1352774558 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114982971574334800, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+--- !u!1 &1352774559 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1872396388275418, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+--- !u!114 &1352774560
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: secondsString
+  value: 
+--- !u!114 &1352774561
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: minutesString
+  value: 
+--- !u!114 &1352774562
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: millisecondsString
+  value: 
+--- !u!114 &1352774563
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 614.8298
+    y: 55.29789
+    width: 195.74467
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 40
+  blockName: UpdateTimeStringValues
+  description: 
+  eventHandler: {fileID: 0}
+  commandList: []
+  suppressAllAutoSelections: 0
+--- !u!114 &1352774564
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0694011d824baf7498f0057ffa1baa68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  errorMessage: 
+  referencedVariables: []
+  <CommandIndex>k__BackingField: 2
+  <IsExecuting>k__BackingField: 0
+  <ExecutingIconTimer>k__BackingField: 0
+  <ParentBlock>k__BackingField: {fileID: 1352774563}
+  timerID:
+    integerRef: {fileID: 1352774558}
+    integerVal: 0
+  timer:
+    id: 0
+    timerMode: 0
+    timerState: 1
+    timeRecordedString: 
+    stoppingSelfDueToCountdown: 0
+    countdownStartingTimeString: 
+  stat: 2
+  minDigitCount: 2
+  output: {fileID: 1352774561}
+--- !u!114 &1352774565
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0694011d824baf7498f0057ffa1baa68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  errorMessage: 
+  referencedVariables: []
+  <CommandIndex>k__BackingField: 1
+  <IsExecuting>k__BackingField: 0
+  <ExecutingIconTimer>k__BackingField: 0
+  <ParentBlock>k__BackingField: {fileID: 1352774563}
+  timerID:
+    integerRef: {fileID: 1352774558}
+    integerVal: 0
+  timer:
+    id: 0
+    timerMode: 0
+    timerState: 1
+    timeRecordedString: 
+    stoppingSelfDueToCountdown: 0
+    countdownStartingTimeString: 
+  stat: 1
+  minDigitCount: 2
+  output: {fileID: 1352774560}
+--- !u!114 &1352774566
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0694011d824baf7498f0057ffa1baa68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  errorMessage: 
+  referencedVariables: []
+  <CommandIndex>k__BackingField: 0
+  <IsExecuting>k__BackingField: 0
+  <ExecutingIconTimer>k__BackingField: 0
+  <ParentBlock>k__BackingField: {fileID: 1352774563}
+  timerID:
+    integerRef: {fileID: 1352774558}
+    integerVal: 0
+  timer:
+    id: 0
+    timerMode: 0
+    timerState: 1
+    timeRecordedString: 
+    stoppingSelfDueToCountdown: 0
+    countdownStartingTimeString: 
+  stat: 0
+  minDigitCount: 3
+  output: {fileID: 1352774562}
+--- !u!114 &1352774567 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114946882405276954, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+--- !u!114 &1352774570
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: hoursString
+  value: 
+--- !u!114 &1352774571
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0694011d824baf7498f0057ffa1baa68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  indentLevel: 0
+  errorMessage: 
+  referencedVariables: []
+  <CommandIndex>k__BackingField: 3
+  <IsExecuting>k__BackingField: 0
+  <ExecutingIconTimer>k__BackingField: 0
+  <ParentBlock>k__BackingField: {fileID: 1352774563}
+  timerID:
+    integerRef: {fileID: 1352774558}
+    integerVal: 0
+  timer:
+    id: 0
+    timerMode: 0
+    timerState: 1
+    timeRecordedString: 
+    stoppingSelfDueToCountdown: 0
+    countdownStartingTimeString: 
+  stat: 3
+  minDigitCount: 2
+  output: {fileID: 1352774570}
+--- !u!114 &1352774572
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352774559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1352774563}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 1
+--- !u!114 &1352774596 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114594231228199114, guid: 345895a0762d4a747b6aba374b0da272,
+    type: 2}
+  m_PrefabInternal: {fileID: 1352774556}
+  m_Script: {fileID: 11500000, guid: 6e165a32baec18040864c27c29b1a423, type: 3}
 --- !u!1 &1579869407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,8 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 114001333721619416, guid: 345895a0762d4a747b6aba374b0da272,
-    type: 2}
+  selectedFlowchart: {fileID: 1352774557}
 --- !u!4 &1788987021
 Transform:
   m_ObjectHideFlags: 1
