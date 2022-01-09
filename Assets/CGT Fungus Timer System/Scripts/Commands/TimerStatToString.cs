@@ -7,12 +7,11 @@ namespace Fungus.TimeSys
 	public class TimerStatToString : TimerCommand
 	{
 		[SerializeField]
-		TimerStat stat;
+		TimeMeasurement stat;
 
 		[Tooltip("The minimum amount of digits the output should have. Said output will be padded with 0s at the front as appropriate.")]
 		[SerializeField]
-		[Range(1, 99)]
-		int minDigitCount = 2;
+		IntegerData minDigitCount = new IntegerData(2);
 
 		[Tooltip("Where the converted string value will go.")]
 		[SerializeField]
@@ -48,19 +47,19 @@ namespace Fungus.TimeSys
 		protected virtual void UpdateStatDict()
         {
 			// So we won't need to work with any ugly switch statements
-			statDict[TimerStat.milliseconds] = timeRecorded.Milliseconds;
-			statDict[TimerStat.seconds] = timeRecorded.Seconds;
-			statDict[TimerStat.minutes] = timeRecorded.Minutes;
-			statDict[TimerStat.hours] = timeRecorded.Hours;
-			statDict[TimerStat.days] = timeRecorded.Days;
+			statDict[TimeMeasurement.Milliseconds] = timeRecorded.Milliseconds;
+			statDict[TimeMeasurement.Seconds] = timeRecorded.Seconds;
+			statDict[TimeMeasurement.Minutes] = timeRecorded.Minutes;
+			statDict[TimeMeasurement.Hours] = timeRecorded.Hours;
+			statDict[TimeMeasurement.Days] = timeRecorded.Days;
         }
 
-		protected Dictionary<TimerStat, int> statDict = new Dictionary<TimerStat, int>();
+		protected Dictionary<TimeMeasurement, int> statDict = new Dictionary<TimeMeasurement, int>();
 		
 		protected virtual void GenerateOutput()
         {
 			int statValue = statDict[stat];
-			string ensuresMinimumDigitCount = "D" + minDigitCount;
+			string ensuresMinimumDigitCount = "D" + minDigitCount.Value;
 			string resultValue = statValue.ToString(ensuresMinimumDigitCount);
 			output.Value = resultValue;
         }
@@ -69,7 +68,7 @@ namespace Fungus.TimeSys
         {
 			string timerName = timer.Key;
 			string outputVarName = GetOutputVarName();
-			string result = string.Format(summaryFormat, timerName, stat, minDigitCount, outputVarName);
+			string result = string.Format(summaryFormat, timerName, stat, minDigitCount.Value, outputVarName);
 
 			return result;
         }

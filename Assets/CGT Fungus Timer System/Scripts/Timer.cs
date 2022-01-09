@@ -25,7 +25,7 @@ namespace Fungus.TimeSys
         }
 
         [SerializeField]
-        TimerMode timerMode = TimerMode.countdown;
+        TimerMode timerMode = TimerMode.Countdown;
 
         public virtual TimerState TimerState
         {
@@ -34,7 +34,7 @@ namespace Fungus.TimeSys
         }
 
         [SerializeField]
-        TimerState timerState = TimerState.stopped;
+        TimerState timerState = TimerState.Stopped;
 
         // Since TimeSpans can't be serialized by default, we have to maintain string versions
         // of these objects so that we can properly restore them right after deserializing them
@@ -42,7 +42,7 @@ namespace Fungus.TimeSys
 
         public virtual void Update()
         {
-            bool thisIsRunning = timerState == TimerState.running;
+            bool thisIsRunning = timerState == TimerState.Running;
 
             if (thisIsRunning)
             {
@@ -58,13 +58,13 @@ namespace Fungus.TimeSys
         {
             TimeSpan timeElapsedSinceLastUpdate = endDate - lastUpdate;
 
-            if (timerMode == TimerMode.countdown)
+            if (timerMode == TimerMode.Countdown)
             {
                 TimeRecorded = TimeRecorded.Subtract(timeElapsedSinceLastUpdate);
                 StopSelfAsNeeded();
 
             }
-            else if (timerMode == TimerMode.countup)
+            else if (timerMode == TimerMode.Countup)
             {
                 TimeRecorded = TimeRecorded.Add(timeElapsedSinceLastUpdate);
             }
@@ -108,7 +108,7 @@ namespace Fungus.TimeSys
 
         public virtual void EndCountdown()
         {
-            bool thisIsForCountdowns = this.timerMode == TimerMode.countdown;
+            bool thisIsForCountdowns = this.timerMode == TimerMode.Countdown;
             // ^No point having this func do anything when this timer isn't for countdowns, after all
         
             if (thisIsForCountdowns)
@@ -128,19 +128,19 @@ namespace Fungus.TimeSys
             if (ShouldStartOnRequest())
             {
                 ResetDates();
-                timerState = TimerState.running;
+                timerState = TimerState.Running;
                 OnAnyTimerStart(this);
             }
         }
 
         protected virtual bool ShouldStartOnRequest()
         {
-            bool alreadyRunning = timerState == TimerState.running;
+            bool alreadyRunning = timerState == TimerState.Running;
             if (alreadyRunning)
                 return false;
 
             // We don't want a countdown timer to be able to start while stopped at zero, so...
-            bool isCountdownTimer = this.timerMode == TimerMode.countdown;
+            bool isCountdownTimer = this.timerMode == TimerMode.Countdown;
             bool atCountdownEnd = isCountdownTimer && TimeRecordedIsZero();
             if (atCountdownEnd)
                 return false;
@@ -169,9 +169,9 @@ namespace Fungus.TimeSys
         {
             ResetDates();
 
-            if (timerMode == TimerMode.countdown)
+            if (timerMode == TimerMode.Countdown)
                 TimeRecorded = CountdownStartingTime;
-            else if (timerMode == TimerMode.countup)
+            else if (timerMode == TimerMode.Countup)
                 TimeRecorded = new TimeSpan();
 
             OnAnyTimerReset(this);
@@ -183,7 +183,7 @@ namespace Fungus.TimeSys
             set
             {
                 countdownStartingTime = value;
-                bool shouldSetRecordToCountdown = timerMode == TimerMode.countdown && this.timerState == TimerState.stopped;
+                bool shouldSetRecordToCountdown = timerMode == TimerMode.Countdown && this.timerState == TimerState.Stopped;
                 if (shouldSetRecordToCountdown)
                     TimeRecorded = countdownStartingTime;
                 UpdateCountdownStartingTimeString();
@@ -208,11 +208,11 @@ namespace Fungus.TimeSys
 
         public virtual void Stop()
         {
-            bool isAlreadyStopped = timerState == TimerState.stopped;
+            bool isAlreadyStopped = timerState == TimerState.Stopped;
             if (isAlreadyStopped)
                 return;
 
-            timerState = TimerState.stopped;
+            timerState = TimerState.Stopped;
 
             if (!stoppingSelfDueToCountdown)
                 OnAnyTimerStop(this);
@@ -237,13 +237,13 @@ namespace Fungus.TimeSys
 
     public enum TimerMode
     {
-        countdown,
-        countup
+        Countdown,
+        Countup
     }
 
     public enum TimerState
     {
-        running,
-        stopped
+        Running,
+        Stopped
     }
 }

@@ -23,7 +23,7 @@ namespace Fungus.TimeSys
         protected virtual void SetUpPlaytimeTimer()
         {
             CreateTimerWithID(playtimeTimerID);
-            timers[0].TimerMode = TimerMode.countup;
+            timers[0].TimerMode = TimerMode.Countup;
         }
 
         protected virtual void CreateTimerWithID(int id)
@@ -120,7 +120,7 @@ namespace Fungus.TimeSys
             EnsureTimerExistsWithID(id);
             Timer timerToWorkWith = timers[id];
 
-            bool notForCountdowns = timerToWorkWith.TimerMode != TimerMode.countdown;
+            bool notForCountdowns = timerToWorkWith.TimerMode != TimerMode.Countdown;
             if (notForCountdowns)
             {
                 string messageFormat = "Cannot force countdown-ending of Timer with ID {0} since it's not a Countdown timer.";
@@ -129,7 +129,7 @@ namespace Fungus.TimeSys
                 return;
             }
 
-            bool itIsCountingDown = timerToWorkWith.TimerState == TimerState.running;
+            bool itIsCountingDown = timerToWorkWith.TimerState == TimerState.Running;
 
             if (itIsCountingDown)
             {
