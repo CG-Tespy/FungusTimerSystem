@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Fungus.TimeSys
+﻿namespace Fungus.TimeSys
 {
 	public enum TimeMeasurement
     {
