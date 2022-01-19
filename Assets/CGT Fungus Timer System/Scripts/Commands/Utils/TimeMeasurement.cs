@@ -1,4 +1,4 @@
-﻿namespace Fungus.TimeSys
+﻿namespace CGT.Fungus.TimerSys
 {
 	public enum TimeMeasurement
     {

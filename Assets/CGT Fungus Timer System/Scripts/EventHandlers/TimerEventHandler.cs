@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     
     public abstract class TimerEventHandler : EventHandler
@@ -69,5 +70,6 @@ namespace Fungus.TimeSys
         {
             TimerEvent -= OnTimerEventExecuted;
         }
+
     }
 }

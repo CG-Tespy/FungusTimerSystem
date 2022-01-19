@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
 	[CommandInfo("Timer", "Timer Stat to String", "Puts the value of a timer stat into a String Variable with the specified min digit count")]
 	public class TimerStatToString : TimerCommand
@@ -66,20 +67,25 @@ namespace Fungus.TimeSys
 
         public override string GetSummary()
         {
-			string timerName = timer.Key;
-			string outputVarName = GetOutputVarName();
-			string result = string.Format(summaryFormat, timerName, stat, minDigitCount.Value, outputVarName);
+			string summary = "";
 
-			return result;
+			if (TimerInputIsSet)
+			{
+				string timerName = timer.Key;
+				string outputVarName = GetOutputVarName();
+				summary = string.Format(summaryFormat, timerName, stat, minDigitCount.Value, outputVarName);
+			}
+
+			return summary;
         }
 
 		protected virtual string GetOutputVarName()
         {
 			// Helper for GetSummary
-			string result = "<noVarAssigned>";
-			bool varIsThere = output != null;
+			string result = "<noOutputAssigned>";
+			bool outputVarAvailable = output != null;
 
-			if (varIsThere)
+			if (TimerInputIsSet && outputVarAvailable)
 			{
 				string variableName = output.Key;
 				result = variableName;

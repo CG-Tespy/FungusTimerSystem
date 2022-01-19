@@ -2,7 +2,7 @@
 using DateTime = System.DateTime;
 using TimeSpan = System.TimeSpan;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     /// <summary>
     /// Helps keep track of time.

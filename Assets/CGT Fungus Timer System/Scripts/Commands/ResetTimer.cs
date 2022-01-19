@@ -1,4 +1,6 @@
-﻿namespace Fungus.TimeSys
+﻿using Fungus;
+
+namespace CGT.Fungus.TimerSys
 {
     [CommandInfo("Timer", "Reset Timer", "Resets the timer with the provided ID. Does not stop said timer from running.")]
     public class ResetTimer : TimerCommand

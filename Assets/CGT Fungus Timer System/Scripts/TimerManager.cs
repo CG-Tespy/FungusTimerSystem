@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using TimeSpan = System.TimeSpan;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     public class TimerManager : MonoBehaviour
     {
         protected virtual void Awake()
         {
-            bool timerManagerAlreadyInScene = Instance != null;
+            bool timerManagerAlreadyInScene = Instance != null && Instance != this;
             if (timerManagerAlreadyInScene)
             {
                 Destroy(this.gameObject);
@@ -147,12 +148,11 @@ namespace Fungus.TimeSys
 
         public static void EnsureExists()
         {
-            bool noTimerManagerInScene = Instance == null;
+            bool doesNotExist = Instance == null;
 
-            if (noTimerManagerInScene)
+            if (doesNotExist)
             {
                 GameObject managerHolder = new GameObject("TimerManager");
-
                 Instance = managerHolder.AddComponent<TimerManager>();
                 DontDestroyOnLoad(Instance.gameObject);
             }

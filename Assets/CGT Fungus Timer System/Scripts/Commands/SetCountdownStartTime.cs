@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using TimeSpan = System.TimeSpan;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     [CommandInfo("Timer", "Set Countdown Start Time", "Sets the base countdown time for a timer. Only useful for (of course) countdown timers.")]
     public class SetCountdownStartTime : TimerCommand
@@ -26,8 +27,14 @@ namespace Fungus.TimeSys
 
         public override string GetSummary()
         {
-            string timerName = timer.Key;
-            string summary = string.Format(summaryFormat, timerName, milliseconds, seconds, minutes, hours, days);
+            string summary = "";
+
+            if (TimerInputIsSet)
+            {
+                string timerName = timer.Key;
+                summary = string.Format(summaryFormat, timerName, milliseconds, seconds, minutes, hours, days);
+            }
+
             return summary;
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     [EventHandlerInfo("Timer", "Timer Started", "Executes this block when the specified timers start.")]
     public class OnTimerStarted : TimerEventHandler
