@@ -1,6 +1,7 @@
 ﻿using System;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     [EventHandlerInfo("Timer", "Timer Stopped", "Execute this block when the specified timer has stopped.")]
     public class OnTimerStopped : TimerEventHandler

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     [CommandInfo("Timer", "Set Timer Mode", "Sets the type of the timer with the given ID")]
     public class SetTimerMode : TimerCommand
@@ -17,8 +18,14 @@ namespace Fungus.TimeSys
 
         public override string GetSummary()
         {
-            string timerName = timer.Key;
-            string summary = string.Format(summaryFormat, timerName, timerMode);
+            string summary = "";
+
+            if (TimerInputIsSet)
+            {
+                string timerName = timer.Key;
+                summary = string.Format(summaryFormat, timerName, timerMode);
+            }
+
             return summary;
         }
 

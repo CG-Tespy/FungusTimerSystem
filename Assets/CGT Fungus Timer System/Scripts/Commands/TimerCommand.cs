@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using TimeSpan = System.TimeSpan;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     public abstract class TimerCommand : Command
     {
@@ -60,8 +61,19 @@ namespace Fungus.TimeSys
 
         public override string GetSummary()
         {
-            string timerName = timer.Key;
-            return timerName;
+            string summary = "";
+
+            if (TimerInputIsSet)
+            {
+                string timerName = timer.Key;
+                summary = timerName;
+            }
+
+            return summary;
         }
+
+        protected virtual bool TimerInputIsSet { get { return timer != null; } }
+
+        
     }
 }

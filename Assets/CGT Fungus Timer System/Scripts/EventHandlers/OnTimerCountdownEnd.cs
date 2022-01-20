@@ -1,6 +1,7 @@
 ﻿using System;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
 	[EventHandlerInfo("Timer", "Timer Countdown Ended", "Executes this block when a Countdown Timer stops itself due to it hitting 0.")]
 	public class OnTimerCountdownEnd : TimerEventHandler

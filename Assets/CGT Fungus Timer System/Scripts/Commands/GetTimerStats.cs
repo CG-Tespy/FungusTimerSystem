@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using TimeSpan = System.TimeSpan;
+using Fungus;
 
-namespace Fungus.TimeSys
+namespace CGT.Fungus.TimerSys
 {
     [CommandInfo("Timer", "Get Timer Stats", "Lets you get the stats of a timer and put them into variables")]
     public class GetTimerStats : TimerCommand
